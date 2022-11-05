@@ -35,7 +35,7 @@
 
       let currentTab = '';
       webButton.addEventListener('click', function (evt) {
-        text.setAttribute("value", "https://www.octoartx.com.mx/");
+        text.setAttribute("value", "https://octocat-ar.herokuapp.com/");
         currentTab = 'web';
       });
       ideaButton.addEventListener('click', function (evt) {
@@ -59,7 +59,7 @@
 
       text.addEventListener('click', function (evt) {
         if (currentTab === 'web') {
-          window.location.href = "https://www.octoartx.com.mx/";
+          window.location.href = "https://octocat-ar.herokuapp.com/";
         }
         if (currentTab === 'idea') {
           window.location.href = "https://octodex.github.com/";
@@ -347,7 +347,7 @@
       embedded color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false"
       device-orientation-permission-ui="enabled: false" loading-screen="backgroundColor: black">
       <a-assets>
-        <img id="card" src="assets/card.png" />
+        <img id="card" src="Assets/card.png" />
         <img id="icon-micro" src="Assets/icons/microfono.png" />
         <img id="icon-idea" src="Assets/icons/idea.png" />
         <img id="icon-web" src="Assets/icons/web.png" />
@@ -543,26 +543,6 @@ document.getElementById('micro-button').onclick = micro;
       speechSynthesis.speak(utterance)
     }
 
-    if (voz === 'octocat Dime un dato curioso') {
-      console.log("Hola, estas pregutando!");
-      var datos = ['¿Sabías que... Existe una comunidad en línea dedicada a mí? En esta puedes encontrar imágenes de mis distintas facetas que puedes utilizar gratuitamente como avatar de tu usuario de GitHub, para obtener más información visita: octodex.GitHub.com.',
-        '¿Sabias que.. en el año 2013 la marca decide cambiar radicalmente la tipografía del logotipo de GitHub y elimina información innecesaria de esta?, si como escuchas, ya que la plataforma para ese entonces había ganado muchísima fama la plataforma decide eliminar la leyenda "social coding" del logotipo y se decide incorporarme como imagen de la empresa, de esta forma seria más fácil para el usuario recordar un pulpo con cabeza de gato en la parte superior de la leyenda "GitHub" que un par de letras.',
-        '¿Sabias que... GitHub fue desarrollado por Chris Wanstrath, P. J. Hyett, Tom Preston-Werner y Scott Chacon usando Ruby on Rails durante el 2008?, si, GitHub fue desarrollado por tecnología de código abierto y publicado durante el 2008, no obstante, la compañía ya existía y estaba registrada desde el 2007.',
-        '¿Sabías que.. en México solo existen 8 campus GitHub en todo el país y uno de ellos se encuentra en Tlaxiaco? ¡Así es! el Instituto Tecnológico de Tlaxiaco es el único campus en Oaxaca que colabora directamente con GitHub.',
-        'Sabías que.. En una entrevista hecha a PJ Hyett en 2014, menciona que Tom Preston-Werner (otro cofundador) buscaba una imagen divertida en iStockphoto para la página de error de GitHub, cuando encontró mi imagen entre las miles de imágenes de la plataforma, a Tom Preston le gustan mucho los gatos así que le pareció muy ingeniosa mi imagen, además este tenía tentáculos que parecían ramificaciones salidas de su cuerpo tal cual es la estructura de un repositorio de GitHub, mi imagen le gusto tanto a Tom Preston que lo compro por tan solo 50 dolares, ahora soy una de las imágenes más reconocidas a nivel mundial de una de las compañías con más auge en el mundo.',
-      ];
-      var result = randD(datos);
-      let utterance = new SpeechSynthesisUtterance(result);
-      utterance.lang = 'es-MX'
-      speechSynthesis.speak(utterance)
-    }
-
-    if (voz === 'octocat ¿que es GitHub?' || voz === 'octocat Qué es github') {
-      console.log("Hola, estas preguntando!");
-      let utterance = new SpeechSynthesisUtterance('GitHub es una plataforma de almacenamiento y desarrollo colaborativo de software ("social coding"), propiedad de Microsoft, que ofrece a los desarrolladores y participantes de la comunidad la posibilidad de crear repositorios de códigos y guardarlos en la nube de forma segura, utilizando un sistema de control de versiones (VCS), llamado Git. Es decir, permite alojar repositorios en la nube para gestionarlos y organizarlos de una mejor manera, con ello se mejorar el flujo de trabajo permitiendo la colaboración de desarrolladores en tiempo real desde cualquier parte del mundo, todo esto de manera gratuita.')
-      utterance.lang = 'es-MX'
-      speechSynthesis.speak(utterance)
-    }
     //interaccion con RA         
     if (voz === 'octocat muéstrame a IronCat' || voz === 'octocat Muéstrame a Iron Cat' || voz === 'octocat Muéstrame a Iron Man' || voz === 'Muéstrame a Iron Cat' || voz === 'Muéstrame Iron Cat') {
       console.log("Estas queriendo visualizar el modelo ironcat");
