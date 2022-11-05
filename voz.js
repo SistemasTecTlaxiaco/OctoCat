@@ -6,18 +6,13 @@ window.contadorcubogrande=0;
 
       var arreglovoz = [  'Hola octocat',
             'octocat Dime un dato curioso',
-            'octocat ¿que es GitHub?',
-            'octocat Qué es github',
-            'gracias octocat',
-            'octocat eso es todo por ahora',
-            'octocat preséntate',
+                     'octocat preséntate',
             'octocat muéstrame a IronCat',
             'octocat Muéstrame a Iron Cat',
             'octocat Muéstrame a Iron Man',  
             'Muéstrame a Iron Cat', 
             'Muéstrame Iron Cat',              
             'octocat muéstrame a IronCat más grande',
-            'octocat Muéstrame a Iron Cat más grande', 
             'octocat Muéstrame Iron Man más grande', 
             'Muéstrame a Iron Cat más grande', 
             'Muéstrame Iron Cat más grande', 
@@ -26,10 +21,6 @@ window.contadorcubogrande=0;
             'octocat Muéstrame a Iron Cat más pequeño',
             'octocat Muéstrame Iron Cat más pequeño',
             'octocat Haz que Iron Cat desaparezca',
-            'octocat Haz que ironcat desaparezca', 
-            'octocat regresa al escenario',
-            'realidad muestra un segundo modelo 3D',
-            'realidad regresa al cubo',
             'realidad animación'];
 
 var grammar = '#JSGF V1.0; grammar arreglovoz; public <arreglovoz> = ' + arreglovoz.join(' | ') + ' ;'
@@ -83,22 +74,6 @@ utterance.lang = 'es-MX'
 speechSynthesis.speak(utterance)     
 }
 
-
-if(voz === 'gracias octocat'){
-console.log("Estas dando las gracias");
-let utterance = new SpeechSynthesisUtterance('de nada amigo, quieres que te ayude con algo mas?')
-utterance.lang = 'es-MX'
-speechSynthesis.speak(utterance)   
-}
-
-
-if(voz === 'octocat eso es todo por ahora'){
-console.log("Hola, estas saludando!");
-let utterance = new SpeechSynthesisUtterance('de nada amigo, siempre es un placer ayudarte.')
-utterance.lang = 'es-MX'
-speechSynthesis.speak(utterance)     
-}
-
 if(voz === 'octocat preséntate'){
 console.log("octocat se esta presentando!");
 let utterance = new SpeechSynthesisUtterance('Hola, mi nombre es octocat mascota y logotipo de GitHub, mi nombre e imagen hacen referencia a la estructura y las ramificaciones de mi cuerpo, es decir, la cabeza es mi rama principal y mis tentáculos las ramificaciones de ella, por lo que se asemeja a la estructura y funcionamiento de un repositorio de GitHub.')
@@ -106,26 +81,7 @@ utterance.lang = 'es-MX'
 speechSynthesis.speak(utterance)     
 }
 
-if(voz === 'octocat Dime un dato curioso'){
-console.log("Hola, estas pregutando!");
-var datos=['¿Sabías que... Existe una comunidad en línea dedicada a mí? En esta puedes encontrar imágenes de mis distintas facetas que puedes utilizar gratuitamente como avatar de tu usuario de GitHub, para obtener más información visita: octodex.GitHub.com.', 
-'¿Sabias que.. en el año 2013 la marca decide cambiar radicalmente la tipografía del logotipo de GitHub y elimina información innecesaria de esta?, si como escuchas, ya que la plataforma para ese entonces había ganado muchísima fama la plataforma decide eliminar la leyenda "social coding" del logotipo y se decide incorporarme como imagen de la empresa, de esta forma seria más fácil para el usuario recordar un pulpo con cabeza de gato en la parte superior de la leyenda "GitHub" que un par de letras.',
-'¿Sabias que... GitHub fue desarrollado por Chris Wanstrath, P. J. Hyett, Tom Preston-Werner y Scott Chacon usando Ruby on Rails durante el 2008?, si, GitHub fue desarrollado por tecnología de código abierto y publicado durante el 2008, no obstante, la compañía ya existía y estaba registrada desde el 2007.',
-'¿Sabías que.. en México solo existen 8 campus GitHub en todo el país y uno de ellos se encuentra en Tlaxiaco? ¡Así es! el Instituto Tecnológico de Tlaxiaco es el único campus en Oaxaca que colabora directamente con GitHub.',
-'Sabías que.. En una entrevista hecha a PJ Hyett en 2014, menciona que Tom Preston-Werner (otro cofundador) buscaba una imagen divertida en iStockphoto para la página de error de GitHub, cuando encontró mi imagen entre las miles de imágenes de la plataforma, a Tom Preston le gustan mucho los gatos así que le pareció muy ingeniosa mi imagen, además este tenía tentáculos que parecían ramificaciones salidas de su cuerpo tal cual es la estructura de un repositorio de GitHub, mi imagen le gusto tanto a Tom Preston que lo compro por tan solo 50 dolares, ahora soy una de las imágenes más reconocidas a nivel mundial de una de las compañías con más auge en el mundo.',
-];
-var result= randD(datos);  
-let utterance = new SpeechSynthesisUtterance(result);
-utterance.lang = 'es-MX'
-speechSynthesis.speak(utterance)     
-}
 
-if(voz === 'octocat ¿que es GitHub?' || voz === 'octocat Qué es github'){
-console.log("Hola, estas preguntando!");
-let utterance = new SpeechSynthesisUtterance('GitHub es una plataforma de almacenamiento y desarrollo colaborativo de software ("social coding"), propiedad de Microsoft, que ofrece a los desarrolladores y participantes de la comunidad la posibilidad de crear repositorios de códigos y guardarlos en la nube de forma segura, utilizando un sistema de control de versiones (VCS), llamado Git. Es decir, permite alojar repositorios en la nube para gestionarlos y organizarlos de una mejor manera, con ello se mejorar el flujo de trabajo permitiendo la colaboración de desarrolladores en tiempo real desde cualquier parte del mundo, todo esto de manera gratuita.')
-utterance.lang = 'es-MX'
-speechSynthesis.speak(utterance)     
-} 
 //interaccion con RA         
 if(voz === 'octocat muéstrame a IronCat' || voz === 'octocat Muéstrame a Iron Cat'  || voz === 'octocat Muéstrame a Iron Man'  || voz === 'Muéstrame a Iron Cat' || voz === 'Muéstrame Iron Cat'){
 console.log("Estas queriendo visualizar el modelo ironcat");
@@ -138,17 +94,6 @@ var el = document.querySelector('#avatar');
   speechSynthesis.speak(utterance)    
 }
 
-if (contador ==1){
-  var el = document.querySelector('#caja');
-  el.setAttribute("src", '#Modelo3D');
-  let utterance = new SpeechSynthesisUtterance('Nuevamente se hace presente Ironcat. Dicen que es un famoso y multimillonario personaje que ayuda a compartir proyectos y/o repositorios para elaborar trabajos colaborativos. Aun no sabes quien es?. Por cierto su cabeza se parece a la de un gato justiciero. No, no es BATMAN')
-  utterance.lang = 'es-MX'
-  speechSynthesis.speak(utterance)
-  contador=0;
-}
-contador++;
-console.log(contador);
-}
 
 if(voz === 'octocat muéstrame a ironcat más grande' || voz === 'octocat Muéstrame a Iron Cat más grande' || voz === 'Muéstrame a Iron Cat más grande' || voz === 'octocat Muéstrame Iron Cat más grande' || voz === 'Muéstrame Iron Cat más grande'){
 console.log("Estas queriendo hacer a ironcat mas grande");             
@@ -161,14 +106,6 @@ var el = document.querySelector('#avatar');
   speechSynthesis.speak(utterance)
 }
 
-if(contadorcubogrande ==1){
-  let utterance = new SpeechSynthesisUtterance('Amigo, Ironcat no es como ANT-MAN hacerlo más grande hará que explote su traje, además este no podrá volar. ¿Quieres ser el causante de que Ironcat no vuele?')
-  utterance.lang = 'es-MX'
-  speechSynthesis.speak(utterance)
-  contadorcubogrande=0;
-}
-contadorcubogrande++;
-}
 
 if(voz === 'octocat muéstrame a IronCat más pequeño' || voz === 'octocat Muéstrame ironcat más pequeño' || voz === 'octocat Muéstrame a IronCat más pequeño' || voz === 'octocat Muéstrame Iron Cat más pequeño'){
 console.log("Estas queriendo a ironcat mas pequeño");
@@ -205,41 +142,6 @@ var el = document.querySelector('#avatar');
   speechSynthesis.speak(utterance)
  
 }
-if(voz === 'realidad muestra un modelo 3D'){
-console.log("Estas mostrando un modelo 3D");
-var es = document.querySelector('#entityID1');
-  es.setAttribute("obj-model", 'obj:url(samus/DolBarriersuit.obj);mtl:url(samus/DolBarriersuit.mtl)');
-  es.setAttribute("scale",'.10 .10 .10');
-               
-
-  var el = document.querySelector('#caja');
-      el.setAttribute("opacity", '0.0');        
-                
-  var es = document.querySelector('#entityID2').removeAttribute('gltf-model');
-  
-  let utterance = new SpeechSynthesisUtterance('ya era hora!. ya me estaba aburriendo de los cubos. Aqui esta tu modelo 3D')
-  utterance.lang = 'es-MX'
-  speechSynthesis.speak(utterance)
-}
-
-if(voz === 'realidad muestra un segundo modelo 3D'){
-console.log("Estas mostrando un segundo modelo 3D");
-var es = document.querySelector('#entityID2');
-  es.setAttribute("gltf-model", 'url(llama/scene.gltf)');
-                
-  var el = document.querySelector('#caja');
-      el.setAttribute("opacity", '0.0');       
-                
-  var es = document.querySelector('#entityID1').removeAttribute('obj-model');
-
-  let utterance = new SpeechSynthesisUtterance('Carlos, mira. Mira, si me preguntas no se cual modelo 3D me gusta mas.')
-  utterance.lang = 'es-MX'
-  speechSynthesis.speak(utterance)
-}
-
-console.log('Confidence: ' + event.results[0][0].confidence);
-}
-
 
 recognition.onspeechend = function() {
 recognition.stop();
