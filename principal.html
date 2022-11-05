@@ -36,7 +36,7 @@
 
       let currentTab = '';
       webButton.addEventListener('click', function (evt) {
-        text.setAttribute("value", "https://www.octoartx.com.mx/");
+        text.setAttribute("value", "https://octocat-ar.herokuapp.com/");
         currentTab = 'web';
       });
       ideaButton.addEventListener('click', function (evt) {
@@ -60,7 +60,7 @@
 
       text.addEventListener('click', function (evt) {
         if (currentTab === 'web') {
-          window.location.href = "https://www.octoartx.com.mx/";
+          window.location.href = "https://octocat-ar.herokuapp.com/";
         }
         if (currentTab === 'idea') {
           window.location.href = "https://octodex.github.com/";
@@ -234,7 +234,7 @@ $('.contenedor').fadeOut(100);
   <div class="example-container">
     <div id="example-scanning-overlay" class="hidden">
       <div class="inner">
-        <img src="assets/card.png" />
+        <img src="Assets/card.png" />
         <div class="scanline"></div>
       </div>
     </div>
@@ -243,7 +243,7 @@ $('.contenedor').fadeOut(100);
       embedded color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false"
       device-orientation-permission-ui="enabled: false" loading-screen="backgroundColor: black">
       <a-assets>
-        <img id="card" src="assets/card.png" />
+        <img id="card" src="Assets/card.png" />
         <img id="icon-micro" src="Assets/icons/microfono.png" />
         <img id="icon-idea" src="Assets/icons/idea.png" />
         <img id="icon-web" src="Assets/icons/web.png" />
